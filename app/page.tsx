@@ -1,5 +1,15 @@
 "use client";
 
+if (process.env.NODE_ENV === 'development') {
+  const originalWarn = console.warn;
+  console.warn = (...args) => {
+    if (args[0] && args[0].includes && args[0].includes('Missing `Description`')) {
+      return;
+    }
+    originalWarn.apply(console, args);
+  };
+}
+
 import { Button } from "../components/ui/button";
 import {
   Card,
