@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/NOME-DO-SEU-REPOSITORIO' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/NOME-DO-SEU-REPOSITORIO/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/ATIEX-FRONT' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ATIEX-FRONT/' : '',
 }
 
 module.exports = nextConfig
