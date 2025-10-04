@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true
   },
   basePath: '/ATIEX-FRONT',
-  assetPrefix: '/ATIEX-FRONT/', //dqwdqw
+  assetPrefix: '/ATIEX-FRONT', //dqwdqw
 }
 
 module.exports = nextConfig;
