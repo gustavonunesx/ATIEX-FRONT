@@ -2,12 +2,12 @@
   "name": "frontend-landing",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+    "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start", 
     "lint": "next lint",
-    "deploy": "npm run build && gh-pages -d out"
+    "deploy": "npm run build && gh-pages -d docs"
   },
   "homepage": "https://gustavonunesx.github.io/ATIEX-FRONT",
   "dependencies": {
