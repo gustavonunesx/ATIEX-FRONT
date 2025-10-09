@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:gh-pages": "set NEXT_PUBLIC_BASE_PATH=/ATIEX-FRONT&& next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build:gh-pages && gh-pages -d out"
+    "deploy": "npm run build && gh-pages -d out"
   },
   "homepage": "https://gustavonunesx.github.io/ATIEX-FRONT",
   "dependencies": {
