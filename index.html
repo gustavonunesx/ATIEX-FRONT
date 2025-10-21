@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frontend Pro - Descubra a Carreira</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!-- ====== NAVBAR ====== -->
@@ -16,6 +18,7 @@
       <a href="#dia">Dia a Dia</a>
       <a href="#tecnologias">Tecnologias</a>
       <a href="#salarios">Salários</a>
+      <a href="#graficos">Gráficos</a>
     </nav>
   </header>
 
@@ -25,8 +28,8 @@
     <h1>Descubra a Carreira de <span>Frontend Developer</span></h1>
     <p>Explore o universo fascinante do desenvolvimento front-end: tecnologias, rotina profissional, curiosidades e oportunidades de carreira.</p>
     <div class="buttons">
-      <button class="btn-primary">Explorar Carreira</button>
-      <button class="btn-outline">Por que Frontend?</button>
+      <button class="btn-primary" id="btnExplorar">Explorar Carreira</button>
+      <button class="btn-outline" id="btnPorque">Por que Frontend?</button>
     </div>
 
     <div class="stats">
@@ -36,7 +39,7 @@
     </div>
   </section>
 
-  <!--porque ser front end-->
+  <!--porque ser front end?-->
   <section id="porqueFront" class="porqueFront">
     <br>
     <h2>Porque ser um desenvolvedor FrontEnd?</h2><br>
@@ -46,8 +49,8 @@
   </section>
 
   <!--=====Tecnologia=====-->
-  <section id="tech" class="tecnologias">
-    <div id="card" class="card">
+  <section id="tecnologias" class="tecnologias">
+    <div class="card" data-popup="tecnologias">
       <h1>Tecnologias</h1>
       <ul>
         <li>HTML</li>
@@ -56,7 +59,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-popup="frameworks">
       <h1>FrameWorks</h1>
       <ul>
         <li>React</li>
@@ -65,7 +68,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card" data-popup="ferramentas">
       <h1>Ferramenta</h1>
       <ul>
         <li>Git</li>
@@ -73,8 +76,6 @@
         <li>Figma</li>
       </ul>
     </div>
-    <!-- <script src="/js/scriptClick.js"></script> -->
-
   </section>
 
   <!-- ====== DIA A DIA ====== -->
@@ -83,12 +84,71 @@
     <p class="subtitle">Conheça a rotina típica de um desenvolvedor frontend</p>
 
     <div class="timeline">
-      <div class="card"><div class="time">09:00</div><div class="icon">☕</div><div class="info"><h3>Café e Planejamento</h3><p>Início do dia com café e revisão das tarefas pendentes.</p></div></div>
-      <div class="card"><div class="time">09:30</div><div class="icon">💻</div><div class="info"><h3>Coding Session</h3><p>Desenvolvimento de componentes e funcionalidades.</p></div></div>
-      <div class="card"><div class="time">11:00</div><div class="icon">👥</div><div class="info"><h3>Daily Meeting</h3><p>Reunião diária com a equipe para alinhamentos rápidos.</p></div></div>
-      <div class="card"><div class="time">14:00</div><div class="icon">🧠</div><div class="info"><h3>Code Review</h3><p>Revisão de código e troca de feedbacks entre colegas.</p></div></div>
-      <div class="card"><div class="time">15:30</div><div class="icon">🪲</div><div class="info"><h3>Resolução de Bugs</h3><p>Depuração de erros e melhoria da performance da aplicação.</p></div></div>
-      <div class="card"><div class="time">17:00</div><div class="icon">📈</div><div class="info"><h3>Encerramento e Aprendizado</h3><p>Revisão do progresso e estudo de novas tecnologias.</p></div></div>
+      <div class="card" data-popup="planejamento">
+        <div class="time">09:00</div>
+        <div class="icon">☕</div>
+        <div class="info">
+          <h3>Café e Planejamento</h3>
+          <p>Início do dia com café e revisão das tarefas pendentes.</p>
+        </div>
+      </div>
+      <div class="card" data-popup="coding">
+        <div class="time">09:30</div>
+        <div class="icon">💻</div>
+        <div class="info">
+          <h3>Coding Session</h3>
+          <p>Desenvolvimento de componentes e funcionalidades.</p>
+        </div>
+      </div>
+      <div class="card" data-popup="daily">
+        <div class="time">11:00</div>
+        <div class="icon">👥</div>
+        <div class="info">
+          <h3>Daily Meeting</h3>
+          <p>Reunião diária com a equipe para alinhamentos rápidos.</p>
+        </div>
+      </div>
+      <div class="card" data-popup="review">
+        <div class="time">14:00</div>
+        <div class="icon">🧠</div>
+        <div class="info">
+          <h3>Code Review</h3>
+          <p>Revisão de código e troca de feedbacks entre colegas.</p>
+        </div>
+      </div>
+      <div class="card" data-popup="bugs">
+        <div class="time">15:30</div>
+        <div class="icon">🪲</div>
+        <div class="info">
+          <h3>Resolução de Bugs</h3>
+          <p>Depuração de erros e melhoria da performance da aplicação.</p>
+        </div>
+      </div>
+      <div class="card" data-popup="aprendizado">
+        <div class="time">17:00</div>
+        <div class="icon">📈</div>
+        <div class="info">
+          <h3>Encerramento e Aprendizado</h3>
+          <p>Revisão do progresso e estudo de novas tecnologias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GRÁFICOS ====== -->
+  <section id="graficos" class="graficos-section">
+    <h2>Dados do Mercado</h2>
+    <p class="subtitle">Visualize informações importantes sobre a carreira de Frontend</p>
+
+    <div class="graficos-container">
+      <div class="grafico">
+        <h3>Salários por Nível</h3>
+        <canvas id="salarioChart"></canvas>
+      </div>
+      <div class="grafico">
+        <h3>Tecnologias Mais Populares</h3>
+        <canvas id="techChart"></canvas>
+      </div>
     </div>
   </section>
 
@@ -98,58 +158,60 @@
     <p class="subtitle">Veja quanto ganha um desenvolvedor Front-end no Brasil</p>
 
     <div class="cards">
-      <div class="card salary">
+      <div class="card salary" data-popup="junior">
         <h3>Júnior 💼</h3>
         <p>R$ 3.000 - R$ 5.000</p>
       </div>
-      <div class="card salary">
+      <div class="card salary" data-popup="pleno">
         <h3>Pleno 🚀</h3>
         <p>R$ 6.000 - R$ 9.000</p>
       </div>
-      <div class="card salary">
+      <div class="card salary" data-popup="senior">
         <h3>Sênior 👑</h3>
         <p>R$ 10.000+</p>
       </div>
     </div>
   </section>
 
-    <!-- ====== CURIOSIDADES ====== -->
+  <!-- ====== CURIOSIDADES ====== -->
   <section id="curiosidades" class="cards-section">
     <h2>Curiosidades Fascinantes</h2>
     <p class="subtitle">Descubra fatos interessantes sobre o mundo do desenvolvimento front-end</p>
 
     <div class="cards">
-      <div class="card">
+      <div class="card" data-popup="global">
         <h3>🌎 Global</h3>
         <p>Front-end é uma das áreas mais demandadas no mundo todo, com vagas remotas internacionais.</p>
       </div>
-      <div class="card">
+      <div class="card" data-popup="criatividade">
         <h3>⚙️ Criatividade & Lógica</h3>
         <p>Combina o lado criativo do design com o raciocínio lógico da programação.</p>
       </div>
-      <div class="card">
+      <div class="card" data-popup="valorizacao">
         <h3>🚀 Alta Valorização</h3>
         <p>Profissionais qualificados recebem salários acima da média do mercado.</p>
       </div>
     </div>
   </section>
-<section>
-  <!-- Popup principal -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <p>TESTE popup</p>
-      <button id="fecharPopup">Fechar</button>
-    </div>
-  </div>
-  <script src="./js/scriptClick.js"></script>
-</section>
-
 
   <!-- ====== FOOTER ====== -->
   <footer>
     <p>© 2025 Frontend Pro | Apresentação Educacional</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ====== POPUPS ====== -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h3 id="popupTitle">Título do Popup</h3>
+        <button class="close-popup">&times;</button>
+      </div>
+      <div class="popup-body" id="popupBody">
+        <!-- Conteúdo do popup será inserido aqui -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
