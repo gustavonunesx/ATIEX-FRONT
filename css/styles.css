@@ -568,6 +568,18 @@ footer {
   margin: 20px 0;
   border-left: 4px solid #6366f1;
 }
+.popup-highlight img{
+   display: inline-block;
+  margin: 0 10px; /* Espaçamento horizontal entre as imagens */
+  width: 220px;
+  height: auto;
+}
+.popup-highlight video{
+  display: inline-block;
+  margin: 0 10px; /* Espaçamento horizontal entre as imagens */
+  width: 220px;
+  height: auto;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {

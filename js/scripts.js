@@ -5,9 +5,9 @@ const popupData = {
     content: `
       <p>As tecnologias fundamentais para um desenvolvedor frontend são:</p>
       <div class="popup-highlight">
-        <p><strong>HTML</strong> - Linguagem de marcação para estruturar conteúdo web</p>
-        <p><strong>CSS</strong> - Linguagem de estilo para apresentação visual</p>
-        <p><strong>JavaScript</strong> - Linguagem de programação para interatividade</p>
+        <p><strong>HTML</strong> - Linguagem de marcação para estruturar conteúdo web</p><img src="./images/html.png" alt="HTML"></strong><img src="./images/saidaHtml.png" alt="HTML">
+        <p><strong>CSS</strong> - Linguagem de estilo para apresentação visual</p><img src="./images/css.png" alt="CSS"></strong><img src="./images/saidaCss.png" alt="CSS">
+        <p><strong>JavaScript</strong> - Linguagem de programação para interatividade</p><img src="./images/js.png" alt="JS"><video autoplay muted loop><source src="./images/saidaJs.mp4" type="video/mp4"></video>
       </div>
       <p>Estas três tecnologias formam a base de todo desenvolvimento frontend moderno e são essenciais para qualquer profissional da área.</p>
     `
